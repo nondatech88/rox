@@ -182,10 +182,10 @@
 #   # Persistence configuration for the StackRox database volume.
 #   # Exactly ONE of the nested values should be specified. If none is specified,
 #   # the StackRox deployment will be configured with the default PVC-based persistence.
-#   persistence:
+   persistence:
 #     # The path on the node where to store the StackRox database volume
 #     # when using host path persistence.
-#     hostPath: /var/lib/stackrox
+     hostPath: /var/lib/longhorn
 #
 #     # The persistent volume claim details when storing the StackRox database
 #     # on a persistent volume managed by a Kubernetes persistent volume claim (PVC).
@@ -199,7 +199,7 @@
 #
 #       # The size of the persistent volume managed by the claim, in Gigabytes (or with an
 #       # explicit unit, such as "1Ti"). Defaults to 100Gi.
-#       size: 100
+       size: 30
 #
 #       # If you want to bind a preexisting persistent volume, you can specify it here.
 #       volume:
