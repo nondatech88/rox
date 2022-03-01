@@ -37,7 +37,7 @@
 #   # your custom way of injecting image pull secrets.
    useExisting:
    - stackrox
-   - secret2
+#   - secret2
 #
 #   # useFromDefaultServiceAccount=true will instruct the deployment logic to use any
 #   # image pull secrets referenced by the default service account in the target namespace.
