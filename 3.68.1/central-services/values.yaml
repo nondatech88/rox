@@ -12,7 +12,7 @@
 # according to the registry access in your environment.
 #
 # Other than that, the following are sections that are the most likely to require custom
-# configuration:
+ configuration:
 # - `image.registry`: if you are pulling images from a registry other than `stackrox.io`.
 # - `env.offlineMode`: if you want to run StackRox in offline mode.
 # - `central.disableTelemetry`: if you want to opt out of the transmission of telemetry and
@@ -114,13 +114,13 @@
 #   # Additional endpoints configuration for the Central deployment.
 #   # See the `config/central/endpoints.yaml.default` file that is shipped with this chart
 #   # for a fully documented version.
-   endpointsConfig: |
-     endpoints:
-     - listen: ":8080"
-       protocols:
-       - http
-       tls:
-         disable: true
+#   endpointsConfig: |
+#     endpoints:
+#     - listen: ":8080"
+#       protocols:
+#       - http
+#       tls:
+#         disable: true
 #
 #   # If you want to use a monitoring solution such as Prometheus, set the following value to
 #   # "true" to make a /metrics endpoint for Central available on port 9090.
@@ -171,13 +171,13 @@
 #   # Custom resource overrides for the Central deployment. Use this if your environment is
 #   # very large or very small, and the default resource configuration does not provide
 #   # satisfactory performance.
-#   resources:
-#     requests:
-#       memory: "4Gi"
-#       cpu: "1500m"
-#     limits:
-#       memory: "8Gi"
-#       cpu: "4000m"
+   resources:
+     requests:
+       memory: "4Gi"
+       cpu: "1500m"
+     limits:
+       memory: "4Gi"
+       cpu: "2000m"
 #
 #   # Persistence configuration for the StackRox database volume.
 #   # Exactly ONE of the nested values should be specified. If none is specified,
